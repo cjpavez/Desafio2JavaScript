@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problema 2</title>
+
+    <!-- Hoja de estilos -->
+    <link rel="stylesheet" href="./assets/CSS/styles.css">
+
+</head>
+<body>
+    <h1>Puedes llevar hasta 10 stickers</h1>
+    <div class="stickers">
+        <div class="box">
+            <img src="./assets/images/imagen 1.png" alt="Imagen de stickers 1">
+            <input type="number" id="input1">
+        </div>
+        <div class="box">
+            <img src="./assets/images/imagen 2.jpg" alt="Imagen de stickers 2">
+            <input type="number" id="input2">
+        </div>
+        <div class="box">
+            <img src="./assets/images/imagen 3.jpg" alt="Imagen de stickers 3">
+            <input type="number" id="input3">
+        </div>             
+    </div>
+    <p id="textStickers"></p>
+    <button onclick="
+        var numb1 = document.querySelector('#input1').value
+        var numb2 = document.querySelector('#input2').value
+        var numb3 = document.querySelector('#input3').value
+        
+        var cantidadTotal = numb1 * numb2 * numb3
+
+        if (cantidadTotal <= 10){
+            var cantidadTotalSticker = document.querySelector('#textStickers')
+            cantidadTotalSticker.innerHTML = 'Llevas ' + cantidadTotal + ' stickers'
+            console.log = cantidadTotal
+        }
+        else {
+            var cantidadTotalSticker = document.querySelector('#textStickers')
+            cantidadTotalSticker.innerHTML = 'Llevas demasiados stickers'
+            console.log = cantidadTotal
+        }
+    ">Verificar</button>
+
+    <script>
+        var numb1 = document.querySelector('#input1').value
+        var numb2 = document.querySelector('#input2').value
+        var numb3 = document.querySelector('#input3').value
+        
+        var cantidadTotal = numb1 * numb2 * numb3
+    </script>
+</body>
+</html>
