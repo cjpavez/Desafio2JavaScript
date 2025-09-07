@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problema 3</title>
+
+    <!-- Hoja de estilos -->
+    <link rel="stylesheet" href="./assets/CSS/styles2.css">
+</head>
+<body>
+    <div class="box">
+        <h1>Ingresa el password</h1>
+        <div class="box1">
+            <select id="selector1" onchange="
+                texto1 = document.querySelector('#selector1').value                
+                ">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+            </select>
+            <select id="selector2" onchange="
+                texto2 = document.querySelector('#selector2').value 
+                ">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+            </select>
+            <select id="selector3" onchange="
+                texto3 = document.querySelector('#selector3').value 
+                ">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+            </select>
+        </div>
+        <p id="resultado"></p>
+        <button onclick="
+            var texto1 = document.querySelector('#selector1').value
+            var texto2 = document.querySelector('#selector2').value
+            var texto3 = document.querySelector('#selector3').value
+            
+            var passwordIngresado = texto1 + texto2 + texto3
+            console.log(passwordIngresado) 
+
+            if (passwordIngresado === '911'){
+                parrafo = document.querySelector('#resultado')
+                parrafo.innerHTML = 'Password 1 correcto'
+            }
+            else if (passwordIngresado === '714') {
+                parrafo = document.querySelector('#resultado')
+                parrafo.innerHTML = 'Password 2 correcto'
+            }
+            else {
+                parrafo = document.querySelector('#resultado')
+                parrafo.innerHTML = 'Password incorrecto'
+            }
+        ">Ingresar</button>
+    </div>    
+</body>
+</html>
